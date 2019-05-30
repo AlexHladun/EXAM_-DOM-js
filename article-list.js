@@ -1,21 +1,14 @@
 class ArticleList {
-    constructor(container) {
-        container = document.querySelector('#container');
-        this.arrArticle = [];
-    }
+  constructor(container) {
+      container = document.querySelector('#container');
+      this.arrArticle = [];
+  }
 
-    addArticle(article) {
-        this.arrArticle.push(article);
-      console.log(this.arrArticle)
-    }
+  addArticle(article) {
+      this.arrArticle.push(article);
+  }
 
-    removeArticle(article) {
-        for(let item of this.arrArticle) {
-          for (let [key,value] of Object.entries(item)) {
-              this.arrArticle.map(() => {
-                return (!value in item)
-               })
-             }
-           }
-     }
+  removeArticle(article) {
+      this.arrArticle.splice(this.arrArticle.indexOf(article),1);
+   }
 }
