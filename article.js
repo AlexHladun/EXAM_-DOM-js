@@ -7,7 +7,7 @@ class Article {
         this.text = text;
     }
 
-    mathes(query) {
+    matches(query) {
         if(this.title.includes(query) || this.author.includes(query) || this.text.includes(query)) {
           return true;
         } else {
